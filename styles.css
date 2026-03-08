@@ -677,7 +677,8 @@ h3 {
 
 /* Ghost gothic cross accents on service cards */
 .service-card::before {
-    content: '✝';
+    content: '\271D\FE0E';
+    /* FE0E = text variation selector, prevents iOS emoji rendering */
     position: absolute;
     top: 14px;
     right: 18px;
@@ -688,7 +689,8 @@ h3 {
 }
 
 .service-card::after {
-    content: '✝';
+    content: '\271D\FE0E';
+    /* FE0E = text variation selector, prevents iOS emoji rendering */
     position: absolute;
     bottom: 14px;
     left: 18px;
