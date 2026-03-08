@@ -661,43 +661,39 @@ h3 {
 .logo-cross {
     display: inline-block;
     margin-right: 8px;
-    font-size: 0.9em;
-    background: linear-gradient(170deg, #d8f0ff 0%, #8ab8d8 55%, #4a88b8 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     opacity: 0.75;
     transition: opacity 0.4s ease;
     vertical-align: middle;
+    line-height: 1;
 }
 
-.logo:hover .logo-cross {
-    opacity: 1;
-}
-
-/* Ghost gothic cross accents on service cards */
+/* Ghost gothic cross accents on service cards — pure SVG, zero text rendering = no iOS emoji issues */
 .service-card::before {
-    content: '\271D\FE0E';
-    /* FE0E = text variation selector, prevents iOS emoji rendering */
+    content: '';
     position: absolute;
     top: 14px;
     right: 18px;
-    font-size: 0.95rem;
-    color: #8ab4d4;
+    width: 13px;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 17'%3E%3Cpath d='M5.5 0 L7.5 0 L7.5 5.5 L13 5.5 L13 7.5 L7.5 7.5 L7.5 17 L5.5 17 L5.5 7.5 L0 7.5 L0 5.5 L5.5 5.5 Z' fill='%238ab4d4'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
     pointer-events: none;
     animation: ch-cross-shimmer 5s ease-in-out infinite alternate;
 }
 
 .service-card::after {
-    content: '\271D\FE0E';
-    /* FE0E = text variation selector, prevents iOS emoji rendering */
+    content: '';
     position: absolute;
     bottom: 14px;
     left: 18px;
-    font-size: 0.7rem;
-    color: #7aaad0;
-    pointer-events: none;
+    width: 10px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 17'%3E%3Cpath d='M5.5 0 L7.5 0 L7.5 5.5 L13 5.5 L13 7.5 L7.5 7.5 L7.5 17 L5.5 17 L5.5 7.5 L0 7.5 L0 5.5 L5.5 5.5 Z' fill='%237aaad0'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
     transform: rotate(180deg);
+    pointer-events: none;
     animation: ch-cross-shimmer 5s ease-in-out 2.5s infinite alternate;
 }
 
