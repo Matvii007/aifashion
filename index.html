@@ -8,10 +8,11 @@
     <meta name="description"
         content="AiFashion creates modern advertising visuals using advanced AI video tools to help brands stand out on social media and digital campaigns.">
 
-    <!-- Modern Google Font: Outfit -->
+    <!-- Preconnect to fonts and preload hero image -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/hero.png" as="image">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,7 +22,7 @@
 
     <!-- Navbar -->
     <nav class="navbar animate-fade-in">
-        <div class="logo">AiFashion</div>
+        <div class="logo"><span class="logo-cross" aria-hidden="true">✝</span>AiFashion</div>
         <div class="nav-links">
             <a href="#work">Work</a>
             <a href="#services">Services</a>
@@ -44,11 +45,42 @@
         </div>
         <div class="hero-visual animate-fade-in-delayed">
             <div class="image-wrapper glass-border">
-                <img src="assets/hero.png" alt="Abstract Chrome Fashion Shape" />
+                <img src="assets/hero.png" alt="Abstract Chrome Fashion Shape" fetchpriority="high" decoding="async" />
             </div>
             <div class="hero-glow"></div>
         </div>
     </section>
+
+    <!-- Gothic ornamental divider -->
+    <div class="gothic-divider" aria-hidden="true">
+        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="dg1" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
+                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
+                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
+                stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
+                stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" />
+            <path
+                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
+                fill="url(#dg1)" />
+            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
+            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
+            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
+            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
+        </svg>
+    </div>
 
     <!-- 2) WORK / VISUAL STYLE SECTION -->
     <section id="work" class="work section fade-in-section">
@@ -57,45 +89,82 @@
             <p class="section-description">Examples of cinematic visual direction used in AI fashion commercials.</p>
         </div>
 
-        <div class="cards-grid">
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style1.png" alt="Chrome fashion chain macro" />
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn glass-glow" aria-label="Previous image">←</button>
+            <div class="carousel-track">
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style1.png" alt="Chrome fashion chain macro" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="card-label">Chrome fashion chain macro</div>
                 </div>
-                <div class="card-label">Chrome fashion chain macro</div>
-            </div>
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style2.png" alt="Liquid metal abstract form" />
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style2.png" alt="Liquid metal abstract form" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="card-label">Liquid metal abstract form</div>
                 </div>
-                <div class="card-label">Liquid metal abstract form</div>
-            </div>
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style3.png" alt="Thick chrome chain on neck" />
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style3.png" alt="Thick chrome chain on neck" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="card-label">Chrome chain luxury necklace</div>
                 </div>
-                <div class="card-label">Chrome chain luxury necklace</div>
-            </div>
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style4.png" alt="Shiny metallic fashion object" />
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style4.png" alt="Shiny metallic fashion object" loading="lazy"
+                            decoding="async" />
+                    </div>
+                    <div class="card-label">Shiny metallic fashion object</div>
                 </div>
-                <div class="card-label">Shiny metallic fashion object</div>
-            </div>
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style5.png" alt="Glowing RAW ice crystal" />
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style5.png" alt="Glowing RAW ice crystal" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="card-label">Glowing raw ice crystal</div>
                 </div>
-                <div class="card-label">Glowing raw ice crystal</div>
-            </div>
-            <div class="visual-card glass-panel stagger-item">
-                <div class="card-image-wrapper">
-                    <img src="assets/style6.png" alt="Cinematic futuristic portrait" />
+                <div class="visual-card glass-panel stagger-item">
+                    <div class="card-image-wrapper">
+                        <img src="assets/style6.png" alt="Cinematic futuristic portrait" loading="lazy"
+                            decoding="async" />
+                    </div>
+                    <div class="card-label">Cinematic futuristic portrait</div>
                 </div>
-                <div class="card-label">Cinematic futuristic portrait</div>
             </div>
+            <button class="carousel-btn next-btn glass-glow" aria-label="Next image">→</button>
         </div>
     </section>
+
+    <!-- Gothic ornamental divider -->
+    <div class="gothic-divider" aria-hidden="true">
+        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="dg2" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
+                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
+                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
+                stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
+                stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" />
+            <path
+                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
+                fill="url(#dg2)" />
+            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
+            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
+            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
+            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
+        </svg>
+    </div>
 
     <!-- 3) SERVICES SECTION -->
     <section id="services" class="services section fade-in-section">
@@ -122,6 +191,37 @@
         </div>
     </section>
 
+    <!-- Gothic ornamental divider -->
+    <div class="gothic-divider" aria-hidden="true">
+        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="dg3" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
+                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
+                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
+                stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
+                stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" />
+            <path
+                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
+                fill="url(#dg3)" />
+            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
+            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
+            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
+            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
+        </svg>
+    </div>
+
     <!-- 4) ABOUT SECTION -->
     <section id="about" class="about section fade-in-section">
         <div class="about-content dark-glass glass-border">
@@ -136,6 +236,37 @@
             </div>
         </div>
     </section>
+
+    <!-- Gothic ornamental divider -->
+    <div class="gothic-divider" aria-hidden="true">
+        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="dg4" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
+                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
+                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
+                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
+                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
+                stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
+                stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" />
+            <path
+                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
+                fill="url(#dg4)" />
+            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
+            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
+            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
+            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
+            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
+        </svg>
+    </div>
 
     <!-- 5) CONTACT SECTION -->
     <footer id="contact" class="contact section fade-in-section">
@@ -162,7 +293,8 @@
                 <div class="contact-portrait">
                     <div class="portrait-wrapper">
                         <div class="portrait-glow"></div>
-                        <img src="assets/portrait.png" alt="Creative Director Portrait" />
+                        <img src="assets/portrait.png" alt="Creative Director Portrait" loading="lazy"
+                            decoding="async" />
                     </div>
                 </div>
             </div>
