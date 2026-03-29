@@ -4,324 +4,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AiFashion | Cinematic AI Commercials for Fashion Brands</title>
+    <title>AiFashion | Cinematic AI Commercials for Brands</title>
     <meta name="description"
-        content="AiFashion creates modern advertising visuals using advanced AI video tools to help brands stand out on social media and digital campaigns.">
-
-    <!-- Preconnect to fonts and preload hero image -->
+        content="AiFashion creates cinematic AI product commercials that make your brand look world-class. Fast delivery, premium quality, Apple-level production.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="assets/hero.png" as="image">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Google tag (gtag.js) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-43ZQFCQXC0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-43ZQFCQXC0');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-43ZQFCQXC0');</script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="noise-overlay"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar animate-fade-in">
-        <div class="logo"><span class="logo-cross" aria-hidden="true"><svg viewBox="0 0 13 17" width="11" height="14"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="lcg" x1="0.5" y1="0" x2="0.5" y2="1">
-                            <stop offset="0%" stop-color="#d8f0ff" />
-                            <stop offset="100%" stop-color="#4a88b8" />
-                        </linearGradient>
-                    </defs>
-                    <path
-                        d="M5.5 0 L7.5 0 L7.5 5.5 L13 5.5 L13 7.5 L7.5 7.5 L7.5 17 L5.5 17 L5.5 7.5 L0 7.5 L0 5.5 L5.5 5.5 Z"
-                        fill="url(#lcg)" />
-                </svg></span>AiFashion</div>
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact" class="btn-sm glass-glow">Contact</a>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">AiFashion</a>
+            <div class="nav-links">
+                <a href="#portfolio">Work</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- 1) HERO SECTION -->
-    <section id="hero" class="hero section">
-        <div class="hero-content animate-slide-up">
-            <h1 class="hero-title">AI Commercial Videos for Fashion Brands</h1>
-            <h2 class="hero-subtitle">Cinematic AI-generated commercials for fashion, clothing and product brands.</h2>
-            <p class="hero-description">AiFashion creates modern advertising visuals using advanced AI video tools to
-                help brands stand out on social media and digital campaigns.</p>
-            <div class="hero-actions">
-                <a href="#work" class="btn btn-primary glass-glow">View Work</a>
-                <a href="#contact" class="btn btn-secondary glass-glow">Contact</a>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#portfolio" class="mobile-link">Work</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+
+    <!-- 1. HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge fade-up">AI-Powered Commercial Studio</div>
+            <h1 class="hero-title fade-up delay-1">AI Commercials<br><span class="grad">That Look Like Apple Made
+                    Them</span></h1>
+            <p class="hero-sub fade-up delay-2">We create cinematic AI product commercials that make<br>your brand look
+                world-class.</p>
+            <div class="hero-btns fade-up delay-3">
+                <a href="#contact" class="btn btn-primary">Get Your Commercial <svg width="14" height="14"
+                        viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></a>
+                <a href="#portfolio" class="btn btn-ghost">View Work</a>
+            </div>
+            <div class="hero-stats fade-up delay-4">
+                <div class="hstat"><span class="hstat-n">2–5</span><span class="hstat-l">Days delivery</span></div>
+                <div class="hstat-div"></div>
+                <div class="hstat"><span class="hstat-n">100+</span><span class="hstat-l">Commercials done</span></div>
+                <div class="hstat-div"></div>
+                <div class="hstat"><span class="hstat-n">10x</span><span class="hstat-l">Faster than agencies</span>
+                </div>
             </div>
         </div>
-        <div class="hero-visual animate-fade-in-delayed">
-            <div class="image-wrapper glass-border">
-                <img src="assets/hero.png" alt="Abstract Chrome Fashion Shape" fetchpriority="high" decoding="async" />
-            </div>
-            <div class="hero-glow"></div>
+        <div class="scroll-hint">
+            <div class="scroll-pip"></div>
         </div>
     </section>
 
-    <!-- Gothic ornamental divider -->
-    <div class="gothic-divider" aria-hidden="true">
-        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="dg1" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
-                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
-                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
-                </linearGradient>
-            </defs>
-            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
-                stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" />
-            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
-                stroke="url(#dg1)" stroke-width="1.2" stroke-linecap="round" />
-            <path
-                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
-                fill="url(#dg1)" />
-            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
-            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
-            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
-            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
-        </svg>
-    </div>
-
-    <!-- 2) WORK / VISUAL STYLE SECTION -->
-    <section id="work" class="work section fade-in-section">
-        <div class="section-header">
-            <h2 class="section-title">Visual Style</h2>
-            <p class="section-description">Examples of cinematic visual direction used in AI fashion commercials.</p>
-        </div>
-
-        <div class="carousel-container">
-            <button class="carousel-btn prev-btn glass-glow" aria-label="Previous image">←</button>
-            <div class="carousel-track">
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style1.png" alt="Chrome fashion chain macro" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="card-label">Chrome fashion chain macro</div>
-                </div>
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style2.png" alt="Liquid metal abstract form" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="card-label">Liquid metal abstract form</div>
-                </div>
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style3.png" alt="Thick chrome chain on neck" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="card-label">Chrome chain luxury necklace</div>
-                </div>
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style4.png" alt="Shiny metallic fashion object" loading="lazy"
-                            decoding="async" />
-                    </div>
-                    <div class="card-label">Shiny metallic fashion object</div>
-                </div>
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style5.png" alt="Glowing RAW ice crystal" loading="lazy" decoding="async" />
-                    </div>
-                    <div class="card-label">Glowing raw ice crystal</div>
-                </div>
-                <div class="visual-card glass-panel stagger-item">
-                    <div class="card-image-wrapper">
-                        <img src="assets/style6.png" alt="Cinematic futuristic portrait" loading="lazy"
-                            decoding="async" />
-                    </div>
-                    <div class="card-label">Cinematic futuristic portrait</div>
-                </div>
-            </div>
-            <button class="carousel-btn next-btn glass-glow" aria-label="Next image">→</button>
-        </div>
-    </section>
-
-    <!-- Gothic ornamental divider -->
-    <div class="gothic-divider" aria-hidden="true">
-        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="dg2" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
-                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
-                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
-                </linearGradient>
-            </defs>
-            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
-                stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" />
-            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
-                stroke="url(#dg2)" stroke-width="1.2" stroke-linecap="round" />
-            <path
-                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
-                fill="url(#dg2)" />
-            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
-            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
-            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
-            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
-        </svg>
-    </div>
-
-    <!-- 3) SERVICES SECTION -->
-    <section id="services" class="services section fade-in-section">
-        <div class="section-header">
-            <h2 class="section-title">Services</h2>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card dark-glass glass-glow-hover stagger-item">
-                <div class="service-icon">✦</div>
-                <h3>AI Fashion Commercials</h3>
-                <p>Short cinematic advertising videos for fashion brands and clothing products.</p>
-            </div>
-            <div class="service-card dark-glass glass-glow-hover stagger-item">
-                <div class="service-icon">✦</div>
-                <h3>AI Product Ads</h3>
-                <p>AI-generated product visuals and commercial clips for marketing and social media.</p>
-            </div>
-            <div class="service-card dark-glass glass-glow-hover stagger-item">
-                <div class="service-icon">✦</div>
-                <h3>Creative Concept Ads</h3>
-                <p>Experimental and artistic AI video concepts for brand campaigns.</p>
+    <!-- 2. SOCIAL PROOF -->
+    <section class="proof fade-in-section">
+        <div class="container">
+            <p class="proof-label">Trusted by founders, creators and tech brands worldwide.</p>
+            <div class="logo-row">
+                <span class="logo-mark">Nexus</span>
+                <span class="logo-mark">Vertex</span>
+                <span class="logo-mark">Orion</span>
+                <span class="logo-mark">Lumia</span>
+                <span class="logo-mark">Zephyr</span>
             </div>
         </div>
     </section>
 
-    <!-- Gothic ornamental divider -->
-    <div class="gothic-divider" aria-hidden="true">
-        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="dg3" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
-                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
-                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
-                </linearGradient>
-            </defs>
-            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
-                stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" />
-            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
-                stroke="url(#dg3)" stroke-width="1.2" stroke-linecap="round" />
-            <path
-                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
-                fill="url(#dg3)" />
-            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
-            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
-            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
-            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
-        </svg>
-    </div>
-
-    <!-- 4) ABOUT SECTION -->
-    <section id="about" class="about section fade-in-section">
-        <div class="about-content dark-glass glass-border">
-            <h2 class="section-title">About AiFashion</h2>
-            <div class="about-text">
-                <p>AiFashion is a creative studio focused on cinematic AI-generated commercials for fashion and modern
-                    brands.</p>
-                <p>Using new AI video tools, we create visual concepts that combine technology, design and storytelling
-                    to produce unique brand visuals.</p>
-                <p class="highlight-text">The goal is to help brands create futuristic and memorable advertising
-                    content.</p>
+    <!-- 3. PORTFOLIO -->
+    <section id="portfolio" class="section fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Portfolio</span>
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-desc">Cinematic AI commercials crafted for modern brands.</p>
+            </div>
+            <div class="video-grid">
+                <div class="vcard stagger">
+                    <div class="vthumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
+                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                <path d="M8 5v14l11-7z" />
+                            </svg></div>
+                        <div class="vdur">0:30</div>
+                    </div>
+                    <div class="vinfo">
+                        <h3>MacBook Concept Commercial</h3>
+                        <p>AI product advertisement concept</p>
+                    </div>
+                </div>
+                <div class="vcard stagger">
+                    <div class="vthumb" style="background:linear-gradient(135deg,#0d1117,#1c1917,#2d1b00)">
+                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                <path d="M8 5v14l11-7z" />
+                            </svg></div>
+                        <div class="vdur">0:15</div>
+                    </div>
+                    <div class="vinfo">
+                        <h3>Sneaker Campaign</h3>
+                        <p>AI fashion commercial</p>
+                    </div>
+                </div>
+                <div class="vcard stagger">
+                    <div class="vthumb" style="background:linear-gradient(135deg,#0a0a1a,#141428,#1e1e3f)">
+                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                <path d="M8 5v14l11-7z" />
+                            </svg></div>
+                        <div class="vdur">0:45</div>
+                    </div>
+                    <div class="vinfo">
+                        <h3>Car Teaser</h3>
+                        <p>Cinematic automotive concept</p>
+                    </div>
+                </div>
+                <div class="vcard stagger">
+                    <div class="vthumb" style="background:linear-gradient(135deg,#001a0e,#012d1a,#014d2d)">
+                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                                <path d="M8 5v14l11-7z" />
+                            </svg></div>
+                        <div class="vdur">0:30</div>
+                    </div>
+                    <div class="vinfo">
+                        <h3>Tech Product Launch</h3>
+                        <p>AI-generated launch commercial</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Gothic ornamental divider -->
-    <div class="gothic-divider" aria-hidden="true">
-        <svg viewBox="0 0 1400 70" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="dg4" x1="0" y1="35" x2="1400" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#90c0e0" stop-opacity="0" />
-                    <stop offset="24%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="46%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="50%" stop-color="#e8f6ff" stop-opacity="1" />
-                    <stop offset="54%" stop-color="#d0eeff" stop-opacity="0.9" />
-                    <stop offset="76%" stop-color="#b0d4ec" stop-opacity="0.55" />
-                    <stop offset="100%" stop-color="#90c0e0" stop-opacity="0" />
-                </linearGradient>
-            </defs>
-            <path d="M 0 35 L 568 35 C 586 35 581 22 601 22 C 621 22 616 35 636 35 C 656 35 651 22 668 22 L 679 35"
-                stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" />
-            <path d="M 1400 35 L 832 35 C 814 35 819 22 799 22 C 779 22 784 35 764 35 C 744 35 749 22 732 22 L 721 35"
-                stroke="url(#dg4)" stroke-width="1.2" stroke-linecap="round" />
-            <path
-                d="M 696 8 L 704 8 L 704 29 L 721 29 L 721 38 L 704 38 L 704 63 L 696 63 L 696 38 L 679 38 L 679 29 L 696 29 Z"
-                fill="url(#dg4)" />
-            <circle cx="700" cy="4" r="4" fill="#ddf0ff" fill-opacity="0.9" />
-            <circle cx="700" cy="67" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="675" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <circle cx="725" cy="33" r="4" fill="#cce8f8" fill-opacity="0.85" />
-            <path d="M 700 19 L 703 23 L 700 27 L 697 23 Z" fill="#b0d8f0" fill-opacity="0.75" />
-            <path d="M 700 44 L 703 48 L 700 52 L 697 48 Z" fill="#b0d8f0" fill-opacity="0.7" />
-            <circle cx="700" cy="33" r="2.5" fill="#f0f8ff" fill-opacity="0.75" />
-        </svg>
-    </div>
+    <!-- 4. SERVICES -->
+    <section id="services" class="section alt-bg fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">What We Do</span>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="scard stagger">
+                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                    <h3>AI Commercials</h3>
+                    <p>High-end cinematic commercials generated with advanced AI production pipelines.</p>
+                </div>
+                <div class="scard stagger">
+                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3>Product Launch Videos</h3>
+                    <p>Perfect for product launches, websites and marketing campaigns.</p>
+                </div>
+                <div class="scard stagger">
+                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
+                        </svg></div>
+                    <h3>Brand Films</h3>
+                    <p>Short cinematic brand stories designed to elevate brand perception.</p>
+                </div>
+                <div class="scard stagger">
+                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m12-9l2 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <h3>Social Media Ads</h3>
+                    <p>High-performing AI video ads built to capture attention instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- 5) CONTACT SECTION -->
-    <footer id="contact" class="contact section fade-in-section">
-        <div class="contact-container dark-glass glass-border">
-            <div class="contact-glow"></div>
+    <!-- 5. HOW IT WORKS -->
+    <section id="process" class="section fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-desc">From brief to final video in 4 simple steps.</p>
+            </div>
+            <div class="steps">
+                <div class="step stagger">
+                    <div class="step-n">01</div>
+                    <h3>Brief</h3>
+                    <p>Tell us about your product, brand and vision.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step stagger">
+                    <div class="step-n">02</div>
+                    <h3>Concept</h3>
+                    <p>We design the concept, storyboard and visual direction.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step stagger">
+                    <div class="step-n">03</div>
+                    <h3>Production</h3>
+                    <p>We produce the AI commercial with cinematic precision.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step stagger">
+                    <div class="step-n">04</div>
+                    <h3>Delivery</h3>
+                    <p>You receive a cinematic video ready to publish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 class="section-title">Let's create something for your brand.</h2>
-                    <p class="contact-text">If you want to create a cinematic AI commercial for your brand, feel free to
-                        reach out.</p>
+    <!-- 6. BENEFITS -->
+    <section class="section alt-bg fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Why Us</span>
+                <h2 class="section-title">Built Different</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="bcard stagger">
+                    <div class="bicon">⚡</div>
+                    <h3>10x Faster Production</h3>
+                    <p>Traditional production takes weeks. AI-powered production delivers in days.</p>
+                </div>
+                <div class="bcard stagger">
+                    <div class="bicon">🎬</div>
+                    <h3>Cinematic Quality</h3>
+                    <p>Advanced AI tools combined with professional creative direction.</p>
+                </div>
+                <div class="bcard stagger">
+                    <div class="bicon">💎</div>
+                    <h3>Cost Efficient</h3>
+                    <p>Premium-looking commercials without million-dollar budgets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="contact-methods">
-                        <a href="https://www.instagram.com/mqtwii?igsh=ZDJ5aWtkMGdiMDNm&utm_source=qr" target="_blank"
-                            class="contact-link glass-glow"><span class="icon">IG</span> Instagram</a>
-                        <a href="https://t.me/rItellWorld2" target="_blank" class="contact-link glass-glow"><span
-                                class="icon">TG</span> Telegram</a>
-                        <a href="mailto:matvey.gghit4@gmail.com" class="contact-link glass-glow"><span
-                                class="icon">EM</span>
-                            Email</a>
+    <!-- 7. RESULTS -->
+    <section class="section fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Results</span>
+                <h2 class="section-title">See the Transformation</h2>
+                <p class="section-desc">From product photo to cinematic commercial — in days.</p>
+            </div>
+            <div class="comparison">
+                <div class="comp-card stagger">
+                    <div class="comp-label before-label">Before</div>
+                    <div class="comp-visual before-vis">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#6B7280" stroke-width="1.5" />
+                            <path d="M8 21h8M12 17v4" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <span>Product Photo</span>
                     </div>
                 </div>
-
-                <div class="contact-portrait">
-                    <div class="portrait-wrapper">
-                        <div class="portrait-glow"></div>
-                        <img src="assets/portrait.png" alt="Creative Director Portrait" loading="lazy"
-                            decoding="async" />
+                <div class="comp-arrow">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M6 16h20M20 10l6 6-6 6" stroke="url(#ca)" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <defs>
+                            <linearGradient id="ca" x1="6" y1="16" x2="26" y2="16" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4F7CFF" />
+                                <stop offset="1" stop-color="#00D4FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="comp-card after-card stagger">
+                    <div class="comp-label after-label">After</div>
+                    <div class="comp-visual after-vis">
+                        <div class="after-glow"></div>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                stroke="url(#cb)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="cb" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#4F7CFF" />
+                                    <stop offset="1" stop-color="#00D4FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="grad">Cinematic Commercial</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="footer-copyright">
-                © 2026 AiFashion Studio. All Rights Reserved.
+    <!-- 8. TESTIMONIALS -->
+    <section class="section alt-bg fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Testimonials</span>
+                <h2 class="section-title">What Clients Say</h2>
             </div>
+            <div class="tgrid">
+                <div class="tcard stagger">
+                    <div class="tstars">★★★★★</div>
+                    <p>"Looks like a real Apple commercial. We were blown away by the quality and speed of delivery."
+                    </p>
+                    <div class="tauthor">
+                        <div class="tavatar">A</div>
+                        <div><strong>Alex K.</strong><span>Founder, Tech Startup</span></div>
+                    </div>
+                </div>
+                <div class="tcard stagger">
+                    <div class="tstars">★★★★★</div>
+                    <p>"The best AI product video we've seen. Got it in 3 days and it outperformed all our previous
+                        ads."</p>
+                    <div class="tauthor">
+                        <div class="tavatar">S</div>
+                        <div><strong>Sarah M.</strong><span>Marketing Director</span></div>
+                    </div>
+                </div>
+                <div class="tcard stagger">
+                    <div class="tstars">★★★★★</div>
+                    <p>"I was skeptical about AI commercials but this team delivered something that made our brand look
+                        world-class."</p>
+                    <div class="tauthor">
+                        <div class="tavatar">J</div>
+                        <div><strong>James R.</strong><span>Creative Director</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PRICING -->
+    <section id="pricing" class="section fade-in-section">
+        <div class="container">
+            <div class="section-hdr">
+                <span class="tag">Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-desc">No hidden fees. Premium quality at every tier.</p>
+            </div>
+            <div class="pgrid">
+                <div class="pcard stagger">
+                    <div class="ptier">Starter</div>
+                    <div class="pname">AI Commercial</div>
+                    <div class="pprice">$199</div>
+                    <div class="pdur">10–15 seconds</div>
+                    <ul class="plist">
+                        <li>1 video concept</li>
+                        <li>HD delivery</li>
+                        <li>2 revisions</li>
+                        <li>5-day delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline w-full">Get Started</a>
+                </div>
+                <div class="pcard pcard-feat stagger">
+                    <div class="pbadge">Most Popular</div>
+                    <div class="ptier">Pro</div>
+                    <div class="pname">Cinematic Commercial</div>
+                    <div class="pprice">$499</div>
+                    <div class="pdur">30 seconds</div>
+                    <ul class="plist">
+                        <li>2 video concepts</li>
+                        <li>4K delivery</li>
+                        <li>Unlimited revisions</li>
+                        <li>3-day delivery</li>
+                        <li>Sound design included</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary w-full">Get Started</a>
+                </div>
+                <div class="pcard stagger">
+                    <div class="ptier">Custom</div>
+                    <div class="pname">Full Brand Video</div>
+                    <div class="pprice">Custom</div>
+                    <div class="pdur">Any length</div>
+                    <ul class="plist">
+                        <li>Unlimited concepts</li>
+                        <li>Full campaign suite</li>
+                        <li>Priority support</li>
+                        <li>Dedicated creative director</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline w-full">Talk to Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section id="faq" class="section alt-bg fade-in-section">
+        <div class="container faq-wrap">
+            <div class="section-hdr">
+                <span class="tag">FAQ</span>
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false">How long does production take?<svg class="faq-chevron"
+                            viewBox="0 0 24 24" fill="none" width="18">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
+                    <div class="faq-a">
+                        <p>Usually 2–5 days depending on complexity. Rush delivery available for urgent projects.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false">What do you need from the client?<svg
+                            class="faq-chevron" viewBox="0 0 24 24" fill="none" width="18">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
+                    <div class="faq-a">
+                        <p>Product images, references or product details. The more context you provide, the better the
+                            result.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false">Can you create Apple-style ads?<svg class="faq-chevron"
+                            viewBox="0 0 24 24" fill="none" width="18">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
+                    <div class="faq-a">
+                        <p>Yes, we specialize in cinematic technology-style product commercials. Apple-level aesthetics
+                            are our default.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false">Do you offer revisions?<svg class="faq-chevron"
+                            viewBox="0 0 24 24" fill="none" width="18">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
+                    <div class="faq-a">
+                        <p>Yes. Starter includes 2 revisions, Pro includes unlimited revisions until you're happy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" aria-expanded="false">What formats do you deliver?<svg class="faq-chevron"
+                            viewBox="0 0 24 24" fill="none" width="18">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></button>
+                    <div class="faq-a">
+                        <p>MP4 in HD or 4K, optimized for web, social media, and ad platforms. We can also deliver
+                            vertical formats for TikTok and Instagram.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FINAL CTA -->
+    <section id="contact" class="section fade-in-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-orb"></div>
+                <span class="tag">Ready?</span>
+                <h2 class="cta-title">Ready to create<br>your commercial?</h2>
+                <p class="cta-sub">Join brands that chose cinematic AI production over traditional agencies.</p>
+                <a href="mailto:hello@aifashion.one" class="btn btn-primary btn-lg">Start Your Project <svg width="14"
+                        height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">AiFashion</div>
+                    <p>Cinematic AI commercials for modern brands.</p>
+                    <a href="mailto:hello@aifashion.one" class="footer-email">hello@aifashion.one</a>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h4>Company</h4><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a
+                            href="#pricing">Pricing</a>
+                    </div>
+                    <div class="fcol">
+                        <h4>Info</h4><a href="#faq">FAQ</a><a href="mailto:hello@aifashion.one">Contact</a><a
+                            href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-btm"><span>© 2025 AiFashion. All rights reserved.</span></div>
         </div>
     </footer>
 

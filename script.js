@@ -1,122 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Setup Intersection Observer for scroll animations
-    const setupScrollAnimations = () => {
-        const fadeSections = document.querySelectorAll('.fade-in-section');
-        const staggerItems = document.querySelectorAll('.stagger-item');
 
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15 // Trigger when 15% of the element is visible
-        };
+    // ── NAVBAR SCROLL ──────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-        const sectionObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    // Stop observing once animated
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+    // ── MOBILE MENU ────────────────────────────────────────────────
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => menu.classList.remove('open'));
+    });
 
-        fadeSections.forEach(section => {
-            sectionObserver.observe(section);
+    // ── INTERSECTION OBSERVER: sections + stagger items ────────────
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
         });
+    }, { threshold: 0.1 });
 
-        // Add staggering effect only to service cards, NOT carousel cards
-        // (carousel cards get transitionDelay added which makes later ones slow)
-        const addStaggerDelays = () => {
-            const grids = document.querySelectorAll('.services-grid');
-            grids.forEach(grid => {
-                const items = grid.querySelectorAll('.stagger-item');
-                items.forEach((item, index) => {
-                    item.style.transitionDelay = `${index * 0.15}s`;
-                });
-            });
-        }
+    document.querySelectorAll('.fade-in-section').forEach(el => io.observe(el));
 
-        addStaggerDelays();
-    };
-
-    // 2. Smooth scrolling for internal links
-    const setupSmoothScrolling = () => {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+    // Stagger items get delayed based on index within their parent
+    const staggerIO = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            // Find index among siblings
+            const siblings = Array.from(entry.target.parentElement.querySelectorAll('.stagger'));
+            const idx = siblings.indexOf(entry.target);
+            entry.target.style.transitionDelay = `${idx * 0.1}s`;
+            entry.target.classList.add('visible');
+            staggerIO.unobserve(entry.target);
         });
-    };
-    // 3. Carousel Logic
-    const setupCarousel = () => {
-        const track = document.querySelector('.carousel-track');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
+    }, { threshold: 0.12 });
 
-        if (!track || !prevBtn || !nextBtn) return;
+    document.querySelectorAll('.stagger').forEach(el => staggerIO.observe(el));
 
-        // Cache cards once instead of querying DOM on every scroll event
-        const cards = Array.from(track.querySelectorAll('.visual-card'));
-        let isUpdating = false; // Throttle flag for requestAnimationFrame
-
-        const updateActiveCard = () => {
-            isUpdating = false; // Reset flag
-            const trackCenter = track.getBoundingClientRect().left + track.offsetWidth / 2;
-            let closestCard = null;
-            let minDistance = Infinity;
-
-            cards.forEach(card => {
-                const cardCenter = card.getBoundingClientRect().left + card.offsetWidth / 2;
-                const distance = Math.abs(trackCenter - cardCenter);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestCard = card;
-                }
+    // ── FAQ ACCORDION ──────────────────────────────────────────────
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            // Close all
+            document.querySelectorAll('.faq-q').forEach(b => {
+                b.setAttribute('aria-expanded', 'false');
+                b.nextElementSibling.classList.remove('open');
             });
-
-            cards.forEach(card => card.classList.remove('active'));
-            if (closestCard) closestCard.classList.add('active');
-        };
-
-        // Passive listener: lets the browser scroll without waiting for JS
-        track.addEventListener('scroll', () => {
-            if (!isUpdating) {
-                isUpdating = true;
-                window.requestAnimationFrame(updateActiveCard);
+            // Toggle clicked
+            if (!isOpen) {
+                btn.setAttribute('aria-expanded', 'true');
+                btn.nextElementSibling.classList.add('open');
             }
-        }, { passive: true });
-
-        // Initial setup
-        updateActiveCard();
-
-        const getScrollAmount = () => {
-            const card = track.querySelector('.visual-card');
-            if (!card) return 0;
-            const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-            return card.offsetWidth + gap;
-        };
-
-        nextBtn.addEventListener('click', () => {
-            track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
         });
+    });
 
-        prevBtn.addEventListener('click', () => {
-            track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    // ── SMOOTH SCROLLING ───────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const id = a.getAttribute('href');
+            if (id === '#') return;
+            const target = document.querySelector(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
-    };
+    });
 
-    // Initialize all
-    setupScrollAnimations();
-    setupSmoothScrolling();
-    setupCarousel();
+    // ── HERO VIDEO (load silently) ─────────────────────────────────
+    const video = document.querySelector('.hero-video');
+    if (video) {
+        video.addEventListener('canplay', () => video.classList.add('loaded'));
+    }
+
 });
