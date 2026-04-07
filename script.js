@@ -18,18 +18,18 @@ const lightboxVideo = document.getElementById('lightboxVideo');
 const lightboxClose = document.getElementById('lightboxClose');
 
 const videoSources = [
-  '11111 копія.mp4',
-  '11111111ccc копія.mp4',
-  '11123222111 копія.mp4',
-  'Comp 1 копія.mp4'
+  'https://player.vimeo.com/video/1180955964?autoplay=1',
+  'https://player.vimeo.com/video/1180955939?autoplay=1',
+  'https://player.vimeo.com/video/1180955914?autoplay=1',
+  'https://player.vimeo.com/video/1180955898?autoplay=1'
 ];
 
 document.querySelectorAll('.play-btn').forEach((btn, i) => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
     lightboxVideo.src = videoSources[i];
-    lightboxVideo.load();
-    lightboxVideo.play();
+    
+    
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
   });
@@ -37,7 +37,7 @@ document.querySelectorAll('.play-btn').forEach((btn, i) => {
 
 function closeLightbox() {
   lightbox.classList.remove('active');
-  lightboxVideo.pause();
+  
   lightboxVideo.src = '';
   document.body.style.overflow = '';
 }
