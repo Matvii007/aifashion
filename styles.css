@@ -111,9 +111,9 @@ body {
   left: 50%;
   width: 100vw;
   height: 56.25vw;
-  min-width: 177.77vh;
+  min-width: 177.78vh;
   min-height: 100vh;
-  transform: translate(-50%, -50%) scale(3);
+  transform: translate(-50%, -50%) scale(1.05);
   opacity: 0.55;
 }
 
