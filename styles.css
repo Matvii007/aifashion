@@ -106,9 +106,14 @@ body {
 }
 
 .hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-width: 177.77vh;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
   opacity: 0.55;
 }
 
@@ -277,16 +282,18 @@ body {
 }
 
 .work-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.03);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%) scale(1.03);
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s;
   opacity: 0.75;
 }
 
 .work-card:hover .work-video {
-  transform: scale(1.09);
+  transform: translate(-50%, -50%) scale(1.09);
   opacity: 1;
 }
 
