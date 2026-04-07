@@ -1,522 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AiFashion | Cinematic AI Commercials for Brands</title>
-    <meta name="description"
-        content="AiFashion creates cinematic AI product commercials that make your brand look world-class. Fast delivery, premium quality, Apple-level production.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-43ZQFCQXC0"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-43ZQFCQXC0');</script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIFASHION — Commercial Video Production</title>
+  <meta name="description" content="Cinematic commercial video production for luxury brands. Watches, Perfume, Tech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- NAV -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#hero" class="nav-logo">AiFashion</a>
-            <div class="nav-links">
-                <a href="#portfolio">Work</a>
-                <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#portfolio" class="mobile-link">Work</a>
-        <a href="#services" class="mobile-link">Services</a>
-        <a href="#pricing" class="mobile-link">Pricing</a>
-        <a href="#faq" class="mobile-link">FAQ</a>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
+  <!-- TOP NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <img src="logo.png" alt="AIFASHION" style="height:48px; display:block; mix-blend-mode:screen;">
     </div>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+  </nav>
 
-    <!-- 1. HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-bg">
-            <div class="hero-orb orb-1"></div>
-            <div class="hero-orb orb-2"></div>
-            <div class="hero-grid"></div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge fade-up">AI-Powered Commercial Studio</div>
-            <h1 class="hero-title fade-up delay-1">AI Commercials<br><span class="grad">That Look Like Apple Made
-                    Them</span></h1>
-            <p class="hero-sub fade-up delay-2">We create cinematic AI product commercials that make<br>your brand look
-                world-class.</p>
-            <div class="hero-btns fade-up delay-3">
-                <a href="#contact" class="btn btn-primary">Get Your Commercial <svg width="14" height="14"
-                        viewBox="0 0 14 14" fill="none">
-                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg></a>
-                <a href="#portfolio" class="btn btn-ghost">View Work</a>
-            </div>
-            <div class="hero-stats fade-up delay-4">
-                <div class="hstat"><span class="hstat-n">2–5</span><span class="hstat-l">Days delivery</span></div>
-                <div class="hstat-div"></div>
-                <div class="hstat"><span class="hstat-n">100+</span><span class="hstat-l">Commercials done</span></div>
-                <div class="hstat-div"></div>
-                <div class="hstat"><span class="hstat-n">10x</span><span class="hstat-l">Faster than agencies</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-hint">
-            <div class="scroll-pip"></div>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="Comp 1 копія.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Cinematic Video for Luxury Brands</p>
+      <h1 class="hero-title">We craft <em>frames</em><br>that sell stories.</h1>
+      <p class="hero-sub">MacBook Air · Haute Parfum · Fine Watches</p>
+      <a href="#work" class="hero-btn">
+        <span>View Our Work</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- 2. SOCIAL PROOF -->
-    <section class="proof fade-in-section">
-        <div class="container">
-            <p class="proof-label">Trusted by founders, creators and tech brands worldwide.</p>
-            <div class="logo-row">
-                <span class="logo-mark">Nexus</span>
-                <span class="logo-mark">Vertex</span>
-                <span class="logo-mark">Orion</span>
-                <span class="logo-mark">Lumia</span>
-                <span class="logo-mark">Zephyr</span>
-            </div>
-        </div>
-    </section>
+  <!-- WORK REEL SECTION -->
+  <section class="work section-gap" id="work">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Selected Work</p>
+        <h2 class="section-title">Crafted for the Premium Segment</h2>
+      </div>
 
-    <!-- 3. PORTFOLIO -->
-    <section id="portfolio" class="section fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Portfolio</span>
-                <h2 class="section-title">Our Work</h2>
-                <p class="section-desc">Cinematic AI commercials crafted for modern brands.</p>
-            </div>
-            <div class="video-grid">
-                <div class="vcard stagger">
-                    <div class="vthumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)">
-                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
-                                <path d="M8 5v14l11-7z" />
-                            </svg></div>
-                        <div class="vdur">0:30</div>
-                    </div>
-                    <div class="vinfo">
-                        <h3>MacBook Concept Commercial</h3>
-                        <p>AI product advertisement concept</p>
-                    </div>
-                </div>
-                <div class="vcard stagger">
-                    <div class="vthumb" style="background:linear-gradient(135deg,#0d1117,#1c1917,#2d1b00)">
-                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
-                                <path d="M8 5v14l11-7z" />
-                            </svg></div>
-                        <div class="vdur">0:15</div>
-                    </div>
-                    <div class="vinfo">
-                        <h3>Sneaker Campaign</h3>
-                        <p>AI fashion commercial</p>
-                    </div>
-                </div>
-                <div class="vcard stagger">
-                    <div class="vthumb" style="background:linear-gradient(135deg,#0a0a1a,#141428,#1e1e3f)">
-                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
-                                <path d="M8 5v14l11-7z" />
-                            </svg></div>
-                        <div class="vdur">0:45</div>
-                    </div>
-                    <div class="vinfo">
-                        <h3>Car Teaser</h3>
-                        <p>Cinematic automotive concept</p>
-                    </div>
-                </div>
-                <div class="vcard stagger">
-                    <div class="vthumb" style="background:linear-gradient(135deg,#001a0e,#012d1a,#014d2d)">
-                        <div class="vplay"><svg viewBox="0 0 24 24" fill="white" width="18" height="18">
-                                <path d="M8 5v14l11-7z" />
-                            </svg></div>
-                        <div class="vdur">0:30</div>
-                    </div>
-                    <div class="vinfo">
-                        <h3>Tech Product Launch</h3>
-                        <p>AI-generated launch commercial</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="grid-work">
 
-    <!-- 4. SERVICES -->
-    <section id="services" class="section alt-bg fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">What We Do</span>
-                <h2 class="section-title">Services</h2>
+        <div class="work-card" data-index="0">
+          <div class="work-card__media">
+            <video src="11111 копія.mp4" muted loop playsinline class="work-video"></video>
+            <div class="work-card__overlay">
+              <button class="play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+              </button>
             </div>
-            <div class="services-grid">
-                <div class="scard stagger">
-                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></div>
-                    <h3>AI Commercials</h3>
-                    <p>High-end cinematic commercials generated with advanced AI production pipelines.</p>
-                </div>
-                <div class="scard stagger">
-                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></div>
-                    <h3>Product Launch Videos</h3>
-                    <p>Perfect for product launches, websites and marketing campaigns.</p>
-                </div>
-                <div class="scard stagger">
-                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" />
-                        </svg></div>
-                    <h3>Brand Films</h3>
-                    <p>Short cinematic brand stories designed to elevate brand perception.</p>
-                </div>
-                <div class="scard stagger">
-                    <div class="sicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m12-9l2 9" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg></div>
-                    <h3>Social Media Ads</h3>
-                    <p>High-performing AI video ads built to capture attention instantly.</p>
-                </div>
-            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="tag">Technology</span>
+            <h3>MacBook Air — Product Reveal</h3>
+            <p>A sleek cinematic reveal pushing the boundaries of tech visual storytelling.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- 5. HOW IT WORKS -->
-    <section id="process" class="section fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Process</span>
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-desc">From brief to final video in 4 simple steps.</p>
+        <div class="work-card" data-index="1">
+          <div class="work-card__media">
+            <video src="11111111ccc копія.mp4" muted loop playsinline class="work-video"></video>
+            <div class="work-card__overlay">
+              <button class="play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+              </button>
             </div>
-            <div class="steps">
-                <div class="step stagger">
-                    <div class="step-n">01</div>
-                    <h3>Brief</h3>
-                    <p>Tell us about your product, brand and vision.</p>
-                </div>
-                <div class="step-line"></div>
-                <div class="step stagger">
-                    <div class="step-n">02</div>
-                    <h3>Concept</h3>
-                    <p>We design the concept, storyboard and visual direction.</p>
-                </div>
-                <div class="step-line"></div>
-                <div class="step stagger">
-                    <div class="step-n">03</div>
-                    <h3>Production</h3>
-                    <p>We produce the AI commercial with cinematic precision.</p>
-                </div>
-                <div class="step-line"></div>
-                <div class="step stagger">
-                    <div class="step-n">04</div>
-                    <h3>Delivery</h3>
-                    <p>You receive a cinematic video ready to publish.</p>
-                </div>
-            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="tag">Haute Parfum</span>
+            <h3>Fragrance — Campaign Film</h3>
+            <p>Liquid light, abstract textures, and emotion. Shot and composed for luxury.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- 6. BENEFITS -->
-    <section class="section alt-bg fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Why Us</span>
-                <h2 class="section-title">Built Different</h2>
+        <div class="work-card" data-index="2">
+          <div class="work-card__media">
+            <video src="11123222111 копія.mp4" muted loop playsinline class="work-video"></video>
+            <div class="work-card__overlay">
+              <button class="play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+              </button>
             </div>
-            <div class="benefits-grid">
-                <div class="bcard stagger">
-                    <div class="bicon">⚡</div>
-                    <h3>10x Faster Production</h3>
-                    <p>Traditional production takes weeks. AI-powered production delivers in days.</p>
-                </div>
-                <div class="bcard stagger">
-                    <div class="bicon">🎬</div>
-                    <h3>Cinematic Quality</h3>
-                    <p>Advanced AI tools combined with professional creative direction.</p>
-                </div>
-                <div class="bcard stagger">
-                    <div class="bicon">💎</div>
-                    <h3>Cost Efficient</h3>
-                    <p>Premium-looking commercials without million-dollar budgets.</p>
-                </div>
-            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="tag">Fine Watches</span>
+            <h3>Timepiece — Hero Film</h3>
+            <p>Every second counts. A tribute to mechanical craftsmanship through movement and light.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- 7. RESULTS -->
-    <section class="section fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Results</span>
-                <h2 class="section-title">See the Transformation</h2>
-                <p class="section-desc">From product photo to cinematic commercial — in days.</p>
+        <div class="work-card" data-index="3">
+          <div class="work-card__media">
+            <video src="Comp 1 копія.mp4" muted loop playsinline class="work-video"></video>
+            <div class="work-card__overlay">
+              <button class="play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+              </button>
             </div>
-            <div class="comparison">
-                <div class="comp-card stagger">
-                    <div class="comp-label before-label">Before</div>
-                    <div class="comp-visual before-vis">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="#6B7280" stroke-width="1.5" />
-                            <path d="M8 21h8M12 17v4" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" />
-                        </svg>
-                        <span>Product Photo</span>
-                    </div>
-                </div>
-                <div class="comp-arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M6 16h20M20 10l6 6-6 6" stroke="url(#ca)" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <defs>
-                            <linearGradient id="ca" x1="6" y1="16" x2="26" y2="16" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#4F7CFF" />
-                                <stop offset="1" stop-color="#00D4FF" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="comp-card after-card stagger">
-                    <div class="comp-label after-label">After</div>
-                    <div class="comp-visual after-vis">
-                        <div class="after-glow"></div>
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                stroke="url(#cb)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <defs>
-                                <linearGradient id="cb" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4F7CFF" />
-                                    <stop offset="1" stop-color="#00D4FF" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span class="grad">Cinematic Commercial</span>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="work-card__info">
+            <span class="tag">Brand Film</span>
+            <h3>Visual Identity — Full Production</h3>
+            <p>From concept to final render — a complete commercial film for a luxury brand.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- 8. TESTIMONIALS -->
-    <section class="section alt-bg fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Testimonials</span>
-                <h2 class="section-title">What Clients Say</h2>
-            </div>
-            <div class="tgrid">
-                <div class="tcard stagger">
-                    <div class="tstars">★★★★★</div>
-                    <p>"Looks like a real Apple commercial. We were blown away by the quality and speed of delivery."
-                    </p>
-                    <div class="tauthor">
-                        <div class="tavatar">A</div>
-                        <div><strong>Alex K.</strong><span>Founder, Tech Startup</span></div>
-                    </div>
-                </div>
-                <div class="tcard stagger">
-                    <div class="tstars">★★★★★</div>
-                    <p>"The best AI product video we've seen. Got it in 3 days and it outperformed all our previous
-                        ads."</p>
-                    <div class="tauthor">
-                        <div class="tavatar">S</div>
-                        <div><strong>Sarah M.</strong><span>Marketing Director</span></div>
-                    </div>
-                </div>
-                <div class="tcard stagger">
-                    <div class="tstars">★★★★★</div>
-                    <p>"I was skeptical about AI commercials but this team delivered something that made our brand look
-                        world-class."</p>
-                    <div class="tauthor">
-                        <div class="tavatar">J</div>
-                        <div><strong>James R.</strong><span>Creative Director</span></div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section-gap" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Do</p>
+        <h2 class="section-title">Precision at Every Frame</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <h3>CGI & Motion Design</h3>
+          <p>AI-assisted 3D rendering and VFX sequences created in Veo, refined in After Effects for a photo-realistic result.</p>
         </div>
-    </section>
-
-    <!-- 9. PRICING -->
-    <section id="pricing" class="section fade-in-section">
-        <div class="container">
-            <div class="section-hdr">
-                <span class="tag">Pricing</span>
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-desc">No hidden fees. Premium quality at every tier.</p>
-            </div>
-            <div class="pgrid">
-                <div class="pcard stagger">
-                    <div class="ptier">Starter</div>
-                    <div class="pname">AI Commercial</div>
-                    <div class="pprice">$199</div>
-                    <div class="pdur">10–15 seconds</div>
-                    <ul class="plist">
-                        <li>1 video concept</li>
-                        <li>HD delivery</li>
-                        <li>2 revisions</li>
-                        <li>5-day delivery</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline w-full">Get Started</a>
-                </div>
-                <div class="pcard pcard-feat stagger">
-                    <div class="pbadge">Most Popular</div>
-                    <div class="ptier">Pro</div>
-                    <div class="pname">Cinematic Commercial</div>
-                    <div class="pprice">$499</div>
-                    <div class="pdur">30 seconds</div>
-                    <ul class="plist">
-                        <li>2 video concepts</li>
-                        <li>4K delivery</li>
-                        <li>Unlimited revisions</li>
-                        <li>3-day delivery</li>
-                        <li>Sound design included</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary w-full">Get Started</a>
-                </div>
-                <div class="pcard stagger">
-                    <div class="ptier">Custom</div>
-                    <div class="pname">Full Brand Video</div>
-                    <div class="pprice">Custom</div>
-                    <div class="pdur">Any length</div>
-                    <ul class="plist">
-                        <li>Unlimited concepts</li>
-                        <li>Full campaign suite</li>
-                        <li>Priority support</li>
-                        <li>Dedicated creative director</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline w-full">Talk to Us</a>
-                </div>
-            </div>
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <h3>Product Campaigns</h3>
+          <p>From watches and perfume to consumer tech — we tell the story of your product with cinematic clarity.</p>
         </div>
-    </section>
-
-    <!-- 10. FAQ -->
-    <section id="faq" class="section alt-bg fade-in-section">
-        <div class="container faq-wrap">
-            <div class="section-hdr">
-                <span class="tag">FAQ</span>
-                <h2 class="section-title">Common Questions</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">How long does production take?<svg class="faq-chevron"
-                            viewBox="0 0 24 24" fill="none" width="18">
-                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></button>
-                    <div class="faq-a">
-                        <p>Usually 2–5 days depending on complexity. Rush delivery available for urgent projects.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">What do you need from the client?<svg
-                            class="faq-chevron" viewBox="0 0 24 24" fill="none" width="18">
-                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></button>
-                    <div class="faq-a">
-                        <p>Product images, references or product details. The more context you provide, the better the
-                            result.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">Can you create Apple-style ads?<svg class="faq-chevron"
-                            viewBox="0 0 24 24" fill="none" width="18">
-                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></button>
-                    <div class="faq-a">
-                        <p>Yes, we specialize in cinematic technology-style product commercials. Apple-level aesthetics
-                            are our default.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">Do you offer revisions?<svg class="faq-chevron"
-                            viewBox="0 0 24 24" fill="none" width="18">
-                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></button>
-                    <div class="faq-a">
-                        <p>Yes. Starter includes 2 revisions, Pro includes unlimited revisions until you're happy.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" aria-expanded="false">What formats do you deliver?<svg class="faq-chevron"
-                            viewBox="0 0 24 24" fill="none" width="18">
-                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></button>
-                    <div class="faq-a">
-                        <p>MP4 in HD or 4K, optimized for web, social media, and ad platforms. We can also deliver
-                            vertical formats for TikTok and Instagram.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <h3>Social & Ad Content</h3>
+          <p>Vertical and square content cut for Instagram, TikTok, and paid campaigns — without losing the premium feel.</p>
         </div>
-    </section>
-
-    <!-- 11. FINAL CTA -->
-    <section id="contact" class="section fade-in-section">
-        <div class="container">
-            <div class="cta-card">
-                <div class="cta-orb"></div>
-                <span class="tag">Ready?</span>
-                <h2 class="cta-title">Ready to create<br>your commercial?</h2>
-                <p class="cta-sub">Join brands that chose cinematic AI production over traditional agencies.</p>
-                <a href="mailto:hello@aifashion.one" class="btn btn-primary btn-lg">Start Your Project <svg width="14"
-                        height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg></a>
-            </div>
+        <div class="service-item">
+          <div class="service-num">04</div>
+          <h3>Brand Films</h3>
+          <p>Hero videos that live on landing pages and capture attention in the first 3 seconds. Built to convert.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- 12. FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="footer-logo">AiFashion</div>
-                    <p>Cinematic AI commercials for modern brands.</p>
-                    <a href="mailto:hello@aifashion.one" class="footer-email">hello@aifashion.one</a>
-                </div>
-                <div class="footer-cols">
-                    <div class="fcol">
-                        <h4>Company</h4><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a
-                            href="#pricing">Pricing</a>
-                    </div>
-                    <div class="fcol">
-                        <h4>Info</h4><a href="#faq">FAQ</a><a href="mailto:hello@aifashion.one">Contact</a><a
-                            href="#">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-btm"><span>© 2025 AiFashion. All rights reserved.</span></div>
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Luxury Brands</span><span class="dot">·</span>
+      <span>Haute Parfum</span><span class="dot">·</span>
+      <span>Fine Watches</span><span class="dot">·</span>
+      <span>Consumer Tech</span><span class="dot">·</span>
+      <span>CGI & Motion</span><span class="dot">·</span>
+      <span>After Effects</span><span class="dot">·</span>
+      <span>Google Veo</span><span class="dot">·</span>
+      <span>Luxury Brands</span><span class="dot">·</span>
+      <span>Haute Parfum</span><span class="dot">·</span>
+      <span>Fine Watches</span><span class="dot">·</span>
+      <span>Consumer Tech</span><span class="dot">·</span>
+      <span>CGI & Motion</span><span class="dot">·</span>
+      <span>After Effects</span><span class="dot">·</span>
+      <span>Google Veo</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section-gap">
+    <div class="container about-layout">
+      <div class="about-text">
+        <p class="section-eyebrow">The Studio</p>
+        <h2 class="section-title">Built for the Brands<br>that don't compromise.</em></h2>
+        <p>AIFASHION is a high-end visual lab redefining commercial video for the luxury segment. We bypass traditional production, using advanced AI and motion design to craft pure aesthetic experiences.</p>
+        <p>Our focus is dedicated strictly to premium niches: haute parfum, fine watches, and consumer tech. No cameras, no actors, no physical limits.</p>
+      </div>
+      <div class="about-visual">
+        <div class="about-stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">FEATURED WORKS</span>
         </div>
-    </footer>
+        <div class="about-stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Product Categories</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">CGI & AI PIPELINE</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- CONTACT -->
+  <section class="contact section-gap" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <p class="section-eyebrow">Let's Work Together</p>
+        <h2 class="section-title">Ready to elevate<br>your brand visuals?</h2>
+        <p class="contact-sub">We're available for commercial briefs, product launches, and brand campaigns worldwide.</p>
+        <a href="mailto:aifashion.visual@gmail.com" class="contact-cta">
+          aifashion.visual@gmail.com
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><img src="logo.png" alt="AIFASHION" style="height:38px; display:block; mix-blend-mode:screen;"></span>
+      <span class="footer-copy">© 2025 AiFashion Studio. All visuals produced with AI & After Effects.</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <video class="lightbox-video" id="lightboxVideo" controls></video>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

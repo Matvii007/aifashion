@@ -1,81 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
 
-    // ── NAVBAR SCROLL ──────────────────────────────────────────────
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // ── MOBILE MENU ────────────────────────────────────────────────
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-    });
-    menu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => menu.classList.remove('open'));
-    });
-
-    // ── INTERSECTION OBSERVER: sections + stagger items ────────────
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in-section').forEach(el => io.observe(el));
-
-    // Stagger items get delayed based on index within their parent
-    const staggerIO = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            // Find index among siblings
-            const siblings = Array.from(entry.target.parentElement.querySelectorAll('.stagger'));
-            const idx = siblings.indexOf(entry.target);
-            entry.target.style.transitionDelay = `${idx * 0.1}s`;
-            entry.target.classList.add('visible');
-            staggerIO.unobserve(entry.target);
-        });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.stagger').forEach(el => staggerIO.observe(el));
-
-    // ── FAQ ACCORDION ──────────────────────────────────────────────
-    document.querySelectorAll('.faq-q').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const isOpen = btn.getAttribute('aria-expanded') === 'true';
-            // Close all
-            document.querySelectorAll('.faq-q').forEach(b => {
-                b.setAttribute('aria-expanded', 'false');
-                b.nextElementSibling.classList.remove('open');
-            });
-            // Toggle clicked
-            if (!isOpen) {
-                btn.setAttribute('aria-expanded', 'true');
-                btn.nextElementSibling.classList.add('open');
-            }
-        });
-    });
-
-    // ── SMOOTH SCROLLING ───────────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const id = a.getAttribute('href');
-            if (id === '#') return;
-            const target = document.querySelector(id);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // ── HERO VIDEO (load silently) ─────────────────────────────────
-    const video = document.querySelector('.hero-video');
-    if (video) {
-        video.addEventListener('canplay', () => video.classList.add('loaded'));
-    }
-
+// Hover video play/pause on work cards
+document.querySelectorAll('.work-card').forEach(card => {
+  const video = card.querySelector('.work-video');
+  if (!video) return;
+  card.addEventListener('mouseenter', () => video.play());
+  card.addEventListener('mouseleave', () => video.pause());
 });
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxVideo = document.getElementById('lightboxVideo');
+const lightboxClose = document.getElementById('lightboxClose');
+
+const videoSources = [
+  '11111 копія.mp4',
+  '11111111ccc копія.mp4',
+  '11123222111 копія.mp4',
+  'Comp 1 копія.mp4'
+];
+
+document.querySelectorAll('.play-btn').forEach((btn, i) => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lightboxVideo.src = videoSources[i];
+    lightboxVideo.load();
+    lightboxVideo.play();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  lightboxVideo.pause();
+  lightboxVideo.src = '';
+  document.body.style.overflow = '';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// Reveal on scroll (Intersection Observer)
+const reveals = document.querySelectorAll('.work-card, .service-item, .about-stat, .section-header, .contact-box');
+reveals.forEach(el => el.classList.add('reveal'));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
