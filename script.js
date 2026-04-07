@@ -18,16 +18,17 @@ const lightboxVideo = document.getElementById('lightboxVideo');
 const lightboxClose = document.getElementById('lightboxClose');
 
 const videoSources = [
-  'https://player.vimeo.com/video/1180955964?autoplay=1',
-  'https://player.vimeo.com/video/1180955939?autoplay=1',
-  'https://player.vimeo.com/video/1180955914?autoplay=1',
-  'https://player.vimeo.com/video/1180955898?autoplay=1'
+  'https://player.vimeo.com/video/1180955964?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
+  'https://player.vimeo.com/video/1180955939?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
+  'https://player.vimeo.com/video/1180955914?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
+  'https://player.vimeo.com/video/1180955898?autoplay=1&title=0&byline=0&portrait=0&dnt=1'
 ];
 
 document.querySelectorAll('.play-btn').forEach((btn, i) => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    lightboxVideo.src = videoSources[i];
+    lightboxVideo.src = '';
+    setTimeout(() => { lightboxVideo.src = videoSources[i]; }, 50);
     
     
     lightbox.classList.add('active');
