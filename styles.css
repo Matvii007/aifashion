@@ -691,19 +691,9 @@ body {
 /* ===== MOBILE VIDEO FALLBACK ===== */
 /* iOS/Android block iframe autoplay — hide iframes, show static backgrounds */
 @media (max-width: 768px) {
-  /* Hero: hide iframe, show cinematic gradient instead */
+  /* Hero: hide iframe on mobile, thumbnail shows via inline style */
   .hero-video {
     display: none;
-  }
-
-  .hero-bg {
-    background: linear-gradient(
-      160deg,
-      #0a0a0a 0%,
-      #111008 30%,
-      #1a1408 60%,
-      #0a0a0a 100%
-    );
   }
 
   /* Strengthen hero overlay on mobile so text is very readable */
@@ -717,13 +707,9 @@ body {
     );
   }
 
-  /* Work cards: hide iframe preview, show dark gradient with accent glow */
+  /* Work cards: hide iframe, thumbnail via inline style */
   .work-video {
     display: none;
-  }
-
-  .work-card__media {
-    background: radial-gradient(ellipse at center, #1c160e 0%, #0a0a0a 100%);
   }
 
   /* Always show play button on touch devices */
