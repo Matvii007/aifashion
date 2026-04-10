@@ -129,6 +129,7 @@ body {
   transform: translate(-50%, -50%) scale(1.05);
   opacity: 0.55;
   border: none;
+  object-fit: cover;
 }
 
 .hero-overlay {
@@ -691,10 +692,7 @@ body {
 /* ===== MOBILE VIDEO FALLBACK ===== */
 /* iOS/Android block iframe autoplay — hide iframes, show static backgrounds */
 @media (max-width: 768px) {
-  /* Hero: hide iframe on mobile, thumbnail shows via inline style */
-  .hero-video {
-    display: none;
-  }
+  /* Hero: native <video> tag autoplays fine on mobile */
 
   /* Strengthen hero overlay on mobile so text is very readable */
   .hero-overlay {
