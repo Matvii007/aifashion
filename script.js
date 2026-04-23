@@ -18,18 +18,39 @@ const lightboxVideo = document.getElementById('lightboxVideo');
 const lightboxClose = document.getElementById('lightboxClose');
 
 const videoSources = [
-  'https://player.vimeo.com/video/1180955964?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
-  'https://player.vimeo.com/video/1180955939?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
-  'https://player.vimeo.com/video/1180955914?autoplay=1&title=0&byline=0&portrait=0&dnt=1',
-  'https://player.vimeo.com/video/1180955898?autoplay=1&title=0&byline=0&portrait=0&dnt=1'
+  { type: 'vimeo', src: 'https://player.vimeo.com/video/1180955964?autoplay=1&title=0&byline=0&portrait=0&dnt=1' },
+  { type: 'local', src: 'ring.mp4' },
+  { type: 'vimeo', src: 'https://player.vimeo.com/video/1180955914?autoplay=1&title=0&byline=0&portrait=0&dnt=1' },
+  { type: 'vimeo', src: 'https://player.vimeo.com/video/1180955898?autoplay=1&title=0&byline=0&portrait=0&dnt=1' }
 ];
 
 document.querySelectorAll('.play-btn').forEach((btn, i) => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    lightboxVideo.src = '';
-    setTimeout(() => { lightboxVideo.src = videoSources[i]; }, 50);
     
+    // Remove existing video/iframe
+    const oldMedia = document.getElementById('lightboxVideo');
+    if(oldMedia) oldMedia.remove();
+    
+    const source = videoSources[i];
+    if (source.type === 'vimeo') {
+      const iframe = document.createElement('iframe');
+      iframe.className = 'lightbox-video';
+      iframe.id = 'lightboxVideo';
+      iframe.frameBorder = '0';
+      iframe.allow = 'autoplay; fullscreen';
+      iframe.allowFullscreen = true;
+      iframe.src = source.src;
+      lightbox.insertBefore(iframe, lightbox.querySelector('.vimeo-logo-blocker'));
+    } else {
+      const video = document.createElement('video');
+      video.className = 'lightbox-video';
+      video.id = 'lightboxVideo';
+      video.controls = true;
+      video.autoplay = true;
+      video.src = source.src;
+      lightbox.insertBefore(video, lightbox.querySelector('.vimeo-logo-blocker'));
+    }
     
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -38,8 +59,11 @@ document.querySelectorAll('.play-btn').forEach((btn, i) => {
 
 function closeLightbox() {
   lightbox.classList.remove('active');
-  
-  lightboxVideo.src = '';
+  const media = document.getElementById('lightboxVideo');
+  if(media) {
+    media.src = '';
+    if(media.tagName === 'VIDEO') media.pause();
+  }
   document.body.style.overflow = '';
 }
 
