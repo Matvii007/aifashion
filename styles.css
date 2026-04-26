@@ -801,18 +801,26 @@ body {
   .hero-content { padding: 2.5rem 1.25rem; }
   .hero-scroll-hint { display: none; }
 
-  .editorial-row { flex-direction: column !important; gap: 3rem; }
+  .editorial-row { flex-direction: column !important; gap: 2rem; }
   .ed-media { width: 100%; aspect-ratio: 16/9; }
   .ed-info { width: 100%; padding: 0; }
-  .ed-num { font-size: 14rem; top: -10%; left: -5%; }
-  .editorial-list { gap: 6rem; padding: 0; }
-  .services-grid { grid-template-columns: 1fr; }
-  .service-item { padding: 2rem 1.5rem; }
+  .ed-num { font-size: clamp(8rem, 30vw, 12rem); top: -8%; left: -5% !important; right: auto !important; }
+  .editorial-list { gap: 5rem; padding: 0; }
+  
+  .services-grid { flex-direction: column; }
+  .service-item { padding: 2.5rem 1.5rem; min-height: 300px; }
+  .service-num { font-size: 8rem; }
 
-  .about-visual { flex-direction: column; gap: 1.75rem; }
-  .stat-num { font-size: 3rem; }
+  .marquee-track { gap: 2rem; }
+  .marquee-track span { font-size: 3rem; }
 
-  .contact-sub { font-size: 0.9rem; }
+  .about-visual { flex-direction: column; gap: 3rem; padding-left: 0; }
+  .stat-num { font-size: 4.5rem; text-shadow: 0 0 20px rgba(201,185,154,0.1); }
+
+  .contact-sub { font-size: 0.95rem; margin-bottom: 2.5rem; }
+  .contact-cta { font-size: clamp(1.5rem, 6vw, 2rem); padding-bottom: 0.5rem; }
+  .contact-box .section-title { font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 1.5rem; }
+
   .footer-inner { flex-direction: column; text-align: center; }
 }
 
@@ -820,12 +828,11 @@ body {
 @media (max-width: 480px) {
   .nav-cta { display: none; }
   .hero-title { font-size: clamp(2.4rem, 11vw, 3rem); }
-  .work-card__info { padding: 1.25rem; }
-  .work-card__info h3 { font-size: 1.2rem; }
   .section-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
-  .contact-cta { font-size: 1rem; }
-  .service-num { font-size: 2rem; }
-  .service-item h3 { font-size: 0.9375rem; }
+  .ed-info h3 { font-size: 1.8rem; }
+  .work-meta { padding-top: 1.5rem; gap: 1.25rem; }
+  .service-item h3 { font-size: 1.2rem; }
+  .service-num { font-size: 6rem; top: 15%; left: 5%; }
 }
 
 /* ===== MOBILE VIDEO FALLBACK ===== */
