@@ -4,13 +4,7 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
-// Hover video play/pause on work cards
-document.querySelectorAll('.work-card').forEach(card => {
-  const video = card.querySelector('.work-video');
-  if (!video) return;
-  card.addEventListener('mouseenter', () => video.play());
-  card.addEventListener('mouseleave', () => video.pause());
-});
+// Note: Hover video play/pause removed because Vimeo iframes do not support direct HTML5 video.play() smoothly without API loading.
 
 // Lightbox
 const lightbox = document.getElementById('lightbox');
@@ -104,19 +98,39 @@ gsap.utils.toArray('.section-header, .contact-box').forEach(el => {
   });
 });
 
-// C. Portfolio Cards
-gsap.utils.toArray('.work-card').forEach((card, i) => {
-  gsap.fromTo(card, { opacity: 0, y: 100 }, {
-    scrollTrigger: { trigger: card, start: 'top 90%' },
-    opacity: 1, y: 0, duration: 1.2, ease: 'power3.out'
+// C. Cinematic Editorial Rows
+gsap.utils.toArray('.editorial-row').forEach((row, i) => {
+  // Main row fade & slide
+  gsap.fromTo(row, { opacity: 0, y: 150 }, {
+    scrollTrigger: { trigger: row, start: 'top 85%' },
+    opacity: 1, y: 0, duration: 1.4, ease: 'power3.out'
   });
+
+  // Number Parallax
+  const num = row.querySelector('.ed-num');
+  if(num) {
+    gsap.fromTo(num, { y: -150 }, {
+      scrollTrigger: { trigger: row, start: 'top bottom', end: 'bottom top', scrub: true },
+      y: 150, ease: 'none'
+    });
+  }
+
+  // Video Media inner parallax zoom
+  const mediaWrap = row.querySelector('.ed-media');
+  const video = row.querySelector('.work-video');
+  if(mediaWrap && video) {
+    gsap.fromTo(video, { scale: 1.4, y: -50 }, {
+      scrollTrigger: { trigger: mediaWrap, start: 'top bottom', end: 'bottom top', scrub: true },
+      scale: 1, y: 50, ease: 'none'
+    });
+  }
 });
 
 // D. Services Stagger
 if(document.querySelector('.services-grid')) {
-  gsap.fromTo('.service-item', { opacity: 0, y: 50 }, {
-    scrollTrigger: { trigger: '.services-grid', start: 'top 80%' },
-    opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out'
+  gsap.fromTo('.service-item', { opacity: 0, y: 100 }, {
+    scrollTrigger: { trigger: '.services-grid', start: 'top 75%' },
+    opacity: 1, y: 0, duration: 1.2, stagger: 0.2, ease: 'power3.out'
   });
 }
 
@@ -152,8 +166,13 @@ if(p2Words.length > 0) {
     });
 }
 
-// Stats fade
-gsap.fromTo('.about-stat', { opacity: 0, x: 30 }, {
-  scrollTrigger: { trigger: '.about-visual', start: 'top 80%' },
-  opacity: 1, x: 0, duration: 1, stagger: 0.2, ease: 'power2.out'
+// F. Stats Heavy Fade & Slide
+gsap.utils.toArray('.about-stat').forEach((stat, i) => {
+  const num = stat.querySelector('.stat-num');
+  if(num) {
+    gsap.fromTo(num, { opacity: 0, y: 50, scale: 0.9 }, {
+      scrollTrigger: { trigger: stat, start: 'top 85%' },
+      opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'power4.out'
+    });
+  }
 });
